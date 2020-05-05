@@ -1,0 +1,123 @@
+@media print {
+  body * {
+    visibility: hidden;
+
+  }
+  .print-content, .print-content * {
+    visibility: visible;
+  }
+  .print-content {
+    position: absolute;
+    left: 0px;
+    top: 0px
+  }
+}
+
+
+table {
+  width: 100%;
+}
+th {
+  border: 1px solid black;
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+  background: #ccc;
+}
+th:nth-last-child(1) {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+tr:nth-last-child(1) {
+  border-bottom: 1px solid black;
+}
+td {
+  border: 1px solid black;
+  border-right: none;
+  border-bottom: none;
+}
+
+td:nth-last-child(1) {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+tr:nth-last-child(1) {
+  border-bottom: 1px solid black;
+}
+tr {
+  border-bottom: 1px solid black;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+.bordered-bottom {
+  border-bottom: .5px solid black;
+}
+
+select {
+ height: 20px;
+ width: 20px;
+ -webkit-appearance: none;
+}
+
+.field {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.center-text {
+  left:50%;
+  position: absolute;
+}
+
+.left-text {
+  left: 6%;
+  position: absolute;
+}
+
+.u-remarks {
+  font-size: 12px;
+}
+
+.u-remarks::after{
+  content: '';
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  background: black;
+  bottom: 0;
+}
+.u {
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+
+}
+.u::after {
+  content: '';
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  background: black;
+  left: 0;
+  bottom: 0;
+}
+
+.sub-heading {
+
+}
+
+.u-conducted {
+  font-size: 12px;
+}
+
+.u-conducted::after{
+  content: '';
+  height: 1px;
+  width: 30%;
+  position: absolute;
+  background: black;
+  bottom: 0;
+}

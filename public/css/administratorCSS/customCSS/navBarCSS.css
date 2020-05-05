@@ -1,0 +1,36 @@
+.navbar{
+  height: 66px;
+	background: #e6e6e6;
+}
+
+.navbar-btn{
+	box-shadow: none;
+	outline: none!important;
+	border: none;
+	float:left;
+}
+
+.navFooter{
+  height: 100px;
+}
+
+#btn-toggle-sidebar{
+  float:left;
+  margin-top:0px;
+  margin-left:2px;
+}
+
+#btn-dropdown-menu-item{
+  color:;
+}
+
+#btn-dropdown-menu-item:hover{
+  background: rgba(0, 0, 0, 0.3);
+  text-indent: 6px;
+  font-weight: bold;
+  color: white;
+}
+
+#btn-rightside:hover>button{
+  background-color: none;
+}

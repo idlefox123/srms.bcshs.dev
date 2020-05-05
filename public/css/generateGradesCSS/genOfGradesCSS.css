@@ -1,0 +1,111 @@
+.hdr {
+  margin:0px;
+  font-size: 1em;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+.schl-div {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1em;
+}
+.schl-name {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.class-section {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.section {
+  font-size: 1.2em;
+}
+.report-title-grades {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.sy {
+  margin: 0px;
+  font-size: 1.1em;
+}
+.student-info {
+  padding: 10px;
+}
+.field {
+  font-weight: bold;
+  font-size: 1em;
+}
+.print-btn {
+  position: ;
+
+}
+table {
+  width: 100% !important;
+}
+th {
+  text-align: center !important;
+  background: #fff ;
+}
+
+
+@media print {
+     * {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      margin: 0px !important;
+      padding: 0px !important;
+
+    }
+    .navbar,#sidebar,.left-section, .header-section,.hide,.main-container{
+      display: none;
+    }
+    .print-content {
+      width: 100vw;
+    }
+    .card {
+      border: 0px;
+    }
+    .hdr {
+      margin:0px;
+      font-size: 1.4em;
+    }
+    .schl-div {
+      font-weight: bold;
+      margin: 0px;
+      font-size:1.4em
+    }
+    .schl-name {
+      margin: 0px;
+      font-weight: bold;
+      font-size: 1.6em;
+    }
+    .schl-add {
+      margin: 0px;
+      font-size: 1.4em;
+    }
+    .sy {
+      margin: 0px;
+      font-size: 1.1em;
+    }
+    .class-section {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .section {
+      font-size: 1.4em;
+    }
+    tr:nth-last-child(1){
+      text-align: center;
+      font-weight: bold;
+    }
+    tr {
+      height: 40px;
+    }
+}
