@@ -124,12 +124,12 @@ class Registration extends DatabaseController
     $DB->bindParameter(array_values($attributes));
   }
 
-  private function createAccount($id) {
+  /*private function createAccount($id) {
     try {
       $student = new User();
       //$student->user     = $this->getStudent();
       echo $this->getStudent($id);;
-      /*$student->username = '';
+      $student->username = '';
       $student->password = '123';
       $student->role     = 'Student';
 
@@ -139,7 +139,7 @@ class Registration extends DatabaseController
 
       $student = new Registration();
       $student->user_id = $user_id;
-      $this->updateStudent($id);*/
+      $this->updateStudent($id);
 
     } catch(PDOException $ex){
       echo 'error: ', $ex;
@@ -147,12 +147,10 @@ class Registration extends DatabaseController
      }
     return true;
 
-  }
+  }*/
 
   public function create() {
-    $this->createAccount($lastInsertedID);
-
-    /*$attributes = $this->setAttributes($this->student);
+    $attributes = $this->setAttributes($this->student);
     $attributes = $this->validation($this->getTableFields($this->student), $attributes);
 
     if ($this->status == true) {
@@ -176,7 +174,7 @@ class Registration extends DatabaseController
           $this->insertEduBack($lastInsertedID);
         }
 
-        $this->createAccount($lastInsertedID);
+        //$this->createAccount($lastInsertedID);
 
       }catch(PDOException $ex){
         echo 'error: ', $ex;
@@ -185,14 +183,14 @@ class Registration extends DatabaseController
       return true;
     }else {
       return $this->message;
-    }*/
+    }
 
   }
 
   private function updateStudent($id) {
     $attributes = $this->setAttributes($this->student);
-    print_r($attributes);
-    /*$setOfAttributePairs = $this->setAttributePairs($this->student);
+    //print_r($attributes);
+    $setOfAttributePairs = $this->setAttributePairs($this->student);
     $parameter = $this->genParameter($setOfAttributePairs);
     $attributes = $this->setAttributes($this->student);
     array_push($attributes,$id);
@@ -202,7 +200,7 @@ class Registration extends DatabaseController
     $query .= "SET ".join(', ', $setOfAttributePairs);
     $query .= " WHERE student_id=?";
     $DB->setQuery($query);
-    $DB->bindParameter(array_values($attributes));*/
+    $DB->bindParameter(array_values($attributes));
   }
 
   private function updateEducBack($id) {
