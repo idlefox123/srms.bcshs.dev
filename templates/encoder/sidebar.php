@@ -16,6 +16,9 @@
     <li>
         <a href="/srms.bcshs.dev/Certificate-of-Registration"><i id="sidebarIcon" class="fa fa-print"></i>Printing of COR</a>
     </li>
+    <li>
+        <a href="/srms.bcshs.dev/My-Account"><i id="sidebarIcon" class="fa fa-user-cog"></i>Account</a>
+    </li>
   </ul>
 
   <div class="navFooter">

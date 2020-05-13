@@ -72,8 +72,16 @@ $('#strandFilter, #levelFilter').on('change', function(){
 
 $('#AY, #semester').on('change', function(){
   studentTable.draw();
-  //alert($('#schlYear').val()  );
-  //studentTable.fnDraw();
+  year = $('#AY').val();
+  toYear = parseInt(year) + 1;
+  semester = $('#semester').val();
+  $('#currYear').text(year);
+  $('#toYear').text(toYear);
+  if (semester == 1) {
+    $('#currSemester').text('First Semester');
+  }else {
+    $('#currSemester').text('Second Semester');
+  }
 });
 
 

@@ -8,8 +8,8 @@ if (isset($_POST['action']))
     $action = $_POST['action'];
 
     switch ($action) {
-      case 'insert':
-        newStudent();
+      case 'create':
+        create();
         break;
 
       case 'edit':
@@ -26,7 +26,7 @@ if (isset($_POST['action']))
 }
 
 
- function newStudent(){
+ function create() {
 
   $student = new Registration();
   $student->lrn             = '000000000000';
@@ -49,7 +49,7 @@ if (isset($_POST['action']))
     $student->school_address  = $_POST['addschlAddress'];
   }
 
-  $student = $student->insert();
+  $student = $student->create();
   if ($student === true) {
     echo message('success', 'Student Successfully Registered');
   }else {

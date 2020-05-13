@@ -60,6 +60,7 @@ $('.profile-form').on('submit', function() {
     {
       $('#profile-modal').modal('hide');
       getUser();
+      $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
     }
   });
 });

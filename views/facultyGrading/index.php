@@ -45,6 +45,14 @@
            </div>
          </div>
        </div>
+       <div class="row">
+         <div class="col-md-4"></div>
+         <div class="col-md-4">
+           <span id="message">
+           </span>
+         </div>
+         <div class="col-md-4"></div>
+       </div>
        <hr class="hide">
 
        <div class="row mb-2 hide">

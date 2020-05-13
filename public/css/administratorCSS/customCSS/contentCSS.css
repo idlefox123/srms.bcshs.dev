@@ -1,8 +1,17 @@
-
-thead{
-  /*background: #FFFFC8;*/
+body {
+  font-family: Arial Narrow;
+  background: #F2F2F2;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
+table {
+  width: 100% !important;
+}
+th {
+  text-align: center !important;
+  background: #fff ;
+}
 
 select{
   text-align-last:center;
@@ -12,25 +21,28 @@ select{
   padding:10px;
 }
 .costBtn{
-  background: #FFFFE1;
   font-size: 15px;
-  height:30px;
-  border: 1px solid black;
+  height:33px;
 }
-.costBtn:hover{
-  color: black;
-	background: #FFFFCC;
-}
+
 .reg-form{
   font-weight: bold;
 }
 .separator{
-
   border-bottom-style: solid;
   border-bottom-color: grey;
 }
-.card{
-
+/*.background-img{
+  background-image: url('/srms.bcshs.dev/bcshs-img.PNG');
+  -webkit-background-size: cover;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh !important;
+  width: 100% !important;
+}*/
+.card {
+  box-shadow: 0px 2px #ccc;
 }
 .card-header{
   background: #075044;
@@ -47,9 +59,6 @@ select{
 .modal-header{
   background: #FFFFC8;
 }
-
-
-
 .modal-body{
   /*background: rgba(255,255,153,.1);*/
 }

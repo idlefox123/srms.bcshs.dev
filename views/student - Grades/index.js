@@ -1,10 +1,31 @@
 var selectedStudent,gradeSelectedID,final;
+semester = $('#semester').val();
+function setQuarter(semester) {
+  if (semester == 1) {
+    $('#quarter1').text('1st');
+    $('#quarter2').text('2nd');
+  }else {
+    $('#quarter1').text('3rd');
+    $('#quarter2').text('4th');
+  }
+}
+
+setQuarter(semester);
 
 $('#AY, #semester').on('change', function(){
   getStudentGrades();
   gradesTable.draw();
-  //alert($('#schlYear').val()  );
-  //studentTable.fnDraw();
+  year = $('#AY').val();
+  toYear = parseInt(year) + 1;
+  semester = $('#semester').val();
+  $('#currYear').text(year);
+  $('#toYear').text(toYear);
+  if (semester == 1) {
+    $('#currSemester').text('First Semester');
+  }else {
+    $('#currSemester').text('Second Semester');
+  }
+  setQuarter(semester);
 });
 
 

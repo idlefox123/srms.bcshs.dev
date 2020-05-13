@@ -16,6 +16,10 @@ class View extends Grading
     return $this->getAY();
   }
 
+  public function semesterID() {
+    return $this->getSemesterID();
+  }
+
   public function semester() {
     return $this->getSemester();
   }

@@ -79,7 +79,7 @@ function getRecord() {
 //adding new Student
 $('.addModalForm').on('submit', function(){
   event.preventDefault();
-  action = 'insert';
+  action = 'create';
   var row = pgTableAdd.rows().data().toArray();
   var p_data = JSON.stringify(row);
       $.ajax({

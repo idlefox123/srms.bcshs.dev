@@ -26,8 +26,8 @@
             <div class="form-group col-md-6">
               <label class=" col-form-label" for="semester"><span><i class="fa fa-leaf"> Semester:</i></span></label>
               <select class="form-control" id="semester" name="semester">
-                <option <?php if($view->semester() == '1'){ echo 'selected';} ?> value="1">First Semester</option>
-                <option <?php if($view->semester() == '2'){ echo 'selected';} ?> value="2">Second Semester</option>
+                <option <?php if($view->semesterID() == '1'){ echo 'selected';} ?> value="1">First Semester</option>
+                <option <?php if($view->semesterID() == '2'){ echo 'selected';} ?> value="2">Second Semester</option>
               </select>
             </div>
           </div>

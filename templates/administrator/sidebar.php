@@ -92,7 +92,7 @@
     <a href="/srms.bcshs.dev/Set-Defaults" ><i id="sidebarIcon" class="fa fa-calendar-alt"></i>Set Defaults</a>
   </li>
   <li>
-      <a href="/srms.bcshs.dev/Manage-Users"><i id="sidebarIcon" style =""class="fa fa-user-cog"> </i>Manage User</a>
+      <a href="/srms.bcshs.dev/Manage-Users"><i id="sidebarIcon" style =""class="fa fa-users-cog"> </i>Manage User</a>
   </li>
   </ul>
 

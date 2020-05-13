@@ -35,7 +35,7 @@ class Validation
     $val = trim($this->data['username']);
 
     if (empty($val)) {
-      $this->message('username', message('danger', 'username cannot be empty.'));
+      $this->message('username', message('danger', 'All Fields Required.'));
       $this->getMessage('true');
     }else {
       if(preg_match('/^[a-zA-Z0-9]{6-12}$/', $val)) {

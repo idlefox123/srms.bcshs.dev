@@ -52,7 +52,7 @@
              <div class="col-md-12">
                <div class="flex-center">
                  <span>
-                   <button id="set-ay-btn" class="btn costBtn" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
+                   <button id="set-ay-btn" class="btn costBtn btn-outline-primary" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
                  </span>
                </div>
              </div>
@@ -70,7 +70,7 @@
           <div class="col-md-4 hide">
             <div class="card">
               <div class="card-header">
-                <h5> <i class="fa fa-users"> Student</i> </h5>
+                <h5> <i class="fa fa"> Students</i> </h5>
               </div>
               <div class="card-body">
                 <div class="mt-2">
@@ -96,12 +96,20 @@
           </div><!---1st col end-->
 
           <div class="col-md-8">
-            <div class="card">
-              <div class="card-body">
-                <div class="print-content">
+            <div class="print-content">
+              <div class="card">
+                <div class="card-body">
                   <div class="mt-3 text-center">
                     <p class="hdr">Republic of the Philippines</p>
-                    <p class="hdr">Department of Education</p>
+                    <p class="hdr">
+                      <span>
+                        <img class="doe-logo" src="/srms.bcshs.dev/public/images/DOE.png" alt="">
+                      </span>
+                      Department of Education
+                      <span>
+                        <img class="bcshs-logo" src="/srms.bcshs.dev/public/images/bcshs.jpg" alt="">
+                      </span>
+                    </p>
                     <p class="hdr">Region VIII (Eastern Visayas)</p>
                     <p class="schl-div">Baybay City Division</p>
                     <p class="schl-name">Baybay City Senior High School</p>
@@ -110,7 +118,7 @@
                     <br>
                     <br>
                     <p class="report-title-grades">REPORT ON LEARNING PROGRESS AND ACHIVEMENT</p>
-                    <p class="sy">School Year <?php echo $view->AY() ?> - <?php echo $view->AY()+1 ?>  <?php echo $view->semester() ?></p>
+                    <p class="sy">School Year <span id="currYear"><?php echo $view->AY() ?></span> - <span id="toYear"><?php echo $view->AY()+1 ?></span> <span id="currSemester"><?php echo $view->semester() ?></span> </p>
                     <br>
                   </div>
 
@@ -147,15 +155,14 @@
                           <th rowspan="2" width="10%">Final</th>
                         </tr>
                         <tr style="">
-                          <th width="10%">1st</th>
-                          <th width="10%" style="border-right:1px solid lightgrey;">2nd</th>
+                          <th width="10%"> <span id="quarter1"></span> </th>
+                          <th width="10%" style="border-right:1px solid lightgrey;"> <span id="quarter2"></span> </th>
                         </tr>
                       </thead>
 
 
                     </table>
                   </div>
-
                 </div>
               </div>
             </div>

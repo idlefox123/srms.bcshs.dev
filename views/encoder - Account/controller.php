@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('../../classes/StudentAccount.class.php');
+include_once('../../classes/EncoderAccount.class.php');
 include_once('../../classes/Message.class.php');
 
 if (isset($_POST['action']))

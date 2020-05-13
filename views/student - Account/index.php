@@ -35,13 +35,21 @@
 
        <div class="row">
          <div class="col-sm-3">
-           <h4><i class="fa fa-user-circle"> Profile</i></h4>
+           <h4><i class="fa fa-user-cog"> Account</i></h4>
          </div>
          <div class="col-sm-9">
            <div class="float-right">
              <h5>SY: <?php echo $view->AY() ?> - <?php echo $view->AY()+1 ?>  <?php echo $view->semester() ?></h5>
            </div>
          </div>
+       </div>
+       <div class="row">
+         <div class="col-md-4"></div>
+         <div class="col-md-4">
+           <span id="message">
+           </span>
+         </div>
+         <div class="col-md-4"></div>
        </div>
        <hr>
 
@@ -50,7 +58,7 @@
          <div class="col-md-6">
            <div class="card">
              <div class="card-header">
-               <h5> <i class="fa fa-info-circle"> User</i> </h5>
+               <h5> <i class="fa fa-info-circle"> Account</i> </h5>
              </div>
              <div class="card-body">
                <div class="row">

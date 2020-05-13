@@ -26,7 +26,7 @@
       <a href="/srms.bcshs.dev/Class-Roaster"><i id="sidebarIcon" class="fa fa-list"></i> Class Roaster</a>
     </li>
     <li style="">
-      <a href="/srms.bcshs.dev/My-Account"><i id="sidebarIcon" style =""class="fa fa-cog"> </i>Account</a>
+      <a href="/srms.bcshs.dev/My-Account"><i id="sidebarIcon" style =""class="fa fa-user-cog"> </i>Account</a>
     </li>
   </ul>
   <div class="navFooter">

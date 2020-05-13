@@ -1,7 +1,7 @@
 <div class="">
   <nav class="navbar fixed-top">
     <span><a class="navbar-brand" href="#">
-      <img class="rounded-circle" src="/srms.bcshs.dev/bcshs.jpg" width="35" height="35" alt="">
+      <img class="rounded-circle" src="/srms.bcshs.dev/public/images/bcshs.jpg" width="35" height="35" alt="">
       <span style="font-size:17px">Baybay City Senior High School</span>
     </a></span>
 

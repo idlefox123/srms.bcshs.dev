@@ -12,6 +12,11 @@ class View extends SetDefaults
     return $this->getAY();
   }
 
+  public function semesterID() {
+    return $this->getSemesterID();
+  }
+
+
   public function semester() {
     return $this->getSemester();
   }

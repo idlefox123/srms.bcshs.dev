@@ -54,42 +54,52 @@
 
        <div class="row">
 
-         <div class="col-md-1"></div>
+         <div class="col-md-1 hide"></div>
 
          <div class="col-md-10">
-           <div class="card">
-             <div class="card-body">
+           <div class="print-content">
+             <div class="card">
+               <div class="card-body">
 
-               <div class="mt-3 text-center">
-                 <p class="hdr">Republic of the Philippines</p>
-                 <p class="hdr">Department of Education</p>
-                 <p class="hdr">Region VIII (Eastern Visayas)</p>
-                 <p class="schl-div">Baybay City Division</p>
-                 <p class="schl-name">Baybay City Senior High School</p>
-                 <i class="schl-add">Baybay City, Leyte</i>
-                 <br>
-                 <br>
-                 <br>
-                 <p class="report-title">Master List</p>
-                 <p class="sy">School Year <?php echo $view->AY() ?> - <?php echo $view->AY()+1 ?>  <?php echo $view->semester() ?></p>
-                 <br>
+                 <div class="mt-3 text-center">
+                   <p class="hdr">Republic of the Philippines</p>
+                   <p class="hdr">
+                     <span>
+                       <img class="doe-logo" src="/srms.bcshs.dev/public/images/DOE.png" alt="">
+                     </span>
+                     Department of Education
+                     <span>
+                       <img class="bcshs-logo" src="/srms.bcshs.dev/public/images/bcshs.jpg" alt="">
+                     </span>
+                   </p>
+                   <p class="hdr">Region VIII (Eastern Visayas)</p>
+                   <p class="schl-div">Baybay City Division</p>
+                   <p class="schl-name">Baybay City Senior High School</p>
+                   <i class="schl-add">Baybay City, Leyte</i>
+                   <br>
+                   <br>
+                   <br>
+                   <p class="report-title">Master List</p>
+                   <p class="sy">School Year <?php echo $view->AY() ?> - <?php echo $view->AY()+1 ?>  <?php echo $view->semester() ?></p>
+                   <br>
+                 </div>
+
+                 <table id="studentsTable" class="table-bordered">
+                   <thead>
+                     <th class="text-center" width="3%">No.</th>
+                     <th class="text-center" width="12%">LRN</th>
+                     <th class="text-center" width="30%">Name</th>
+                     <th class="text-center" width="25%">Track / Strand</th>
+                     <th class="text-center" width="12%">Grade Level</th>
+                     <th class="text-center" width="18%">Section</th>
+                   </thead>
+                 </table>
                </div>
-
-               <table width="100%" id="studentsTable" class="table-bordered">
-                 <thead>
-                   <th class="text-center" width="3%">No.</th>
-                   <th class="text-center" width="12%">LRN</th>
-                   <th class="text-center" width="30%">Name</th>
-                   <th class="text-center" width="25%">Track / Strand</th>
-                   <th class="text-center" width="12%">Grade Level</th>
-                   <th class="text-center" width="18%">Section</th>
-                 </thead>
-               </table>
              </div>
            </div>
          </div>
 
-         <div class="col-md-1"></div>
+         <div class="col-md-1 hide"></div>
 
        </div>
 

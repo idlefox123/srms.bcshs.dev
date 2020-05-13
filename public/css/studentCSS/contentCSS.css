@@ -5,7 +5,6 @@ body{
   color: black;
 
 }
-
 .wrapper {
     display: flex;
     width: 100%;
@@ -15,7 +14,6 @@ body{
 .container-fluid{
   padding: 10px;
 }
-
 .profile-container{
   background: #FFFFE1;
   border-radius: 5px 5px 0px 0px;
@@ -31,14 +29,11 @@ body{
 }
 
 .costBtn{
-  background: #FFFFE1;
   font-size: 15px;
-  height:30px;
-  border: 1px solid black;
+  height: 33px;
 }
-.costBtn:hover{
-  color: black;
-	background: #FFFFCC;
+.card {
+  box-shadow: 0px 2px #ccc;
 }
 .card-header{
   background: #075044;

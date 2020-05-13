@@ -45,6 +45,18 @@
 .student-info {
   padding: 10px;
 }
+.doe-logo{
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  margin-left: -125px
+}
+.bcshs-logo{
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  margin-left: 60px;
+}
 table {
   width: 100%;
 }
@@ -113,5 +125,17 @@ th {
       font-weight: bold;
       font-size: 1em;
       line-height: 40px;
+    }
+    .doe-logo{
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      left: 350px;
+    }
+    .bcshs-logo{
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      right: 350px;
     }
 }

@@ -1,6 +1,7 @@
 <?php
-include_once('../../classes/FacultyProfile.class.php');
 session_start();
+include_once('../../classes/FacultyProfile.class.php');
+include_once('../../classes/Message.class.php');
 
 if (isset($_POST['action']))
 {
@@ -35,9 +36,9 @@ function update() {
 
   $faculty = $faculty->update($_SESSION['userID']);
   if ($faculty === true) {
-    echo "Successfully Updated.";
+    echo message('success', 'Profile Successfully Updated.');
   }else {
-    echo "Error on Update.";
+    echo message('danger', 'Error on Update.');
   }
 }
 

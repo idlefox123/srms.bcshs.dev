@@ -1,18 +1,8 @@
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    font-family:Arial Narrow;
-}
 
-.header{
-  height: 50px;
-  background: #FFFFB6;
-}
 a,
 a:hover,
 a:focus{
-  color: #e6e6e6;
+  color: #fff;
 	text-decoration: none;
 	transition: all 0.3s;
 }
@@ -22,12 +12,12 @@ a:focus{
     min-width: 250px;
     max-width: 250px;
     background: #444d54;
-
     margin-top: 66px;
     color: #fff;
     transition: all 0.3s;
 	  position:fixed;
 	  height:100%;
+
 }
 #sidebar li{
   line-height: 50px;
@@ -50,11 +40,6 @@ a:focus{
 	margin-left:0px;
 }
 
-/*#sidebar ul.components{
-	padding: 20px 0px;
-	border-bottom: 1px solid #47748b;
-}*/
-
 #sidebar ul p{
 	padding: 0px;
 	font-size: 1.1em;
@@ -75,7 +60,7 @@ a:focus{
 
 
 #sidebar ul li a:hover {
-    color: white;
+    color: #fff;
     font-weight:bold;
     background: rgb(0,0,0,.2);
 }
@@ -89,6 +74,22 @@ a[aria-expanded="true"] {
 a[data-toggle="collapse"] {
     position: relative;
 }
+/*.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}*/
+
+
+
+#content {
+    position:relative;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
 
 @media(maz-width:768px){
 	#sidebar{margin-left: -250px;}
@@ -100,21 +101,7 @@ a[data-toggle="collapse"] {
 	}
 
 }
-#enrollmentSubmenu,#schedulingSubmenu,#gradeSubmenu,#generationOfReportsSubmenu li{
-  background:#5b6871;
-}
-#schedulingSubmenu li:hover{
-  text-indent: 20px;
-}
-#gradeSubmenu li:hover{
-  text-indent: 20px;
-}
-#enrollmentSubmenu li:hover{
-  text-indent: 20px;
-}
-#generationOfReportsSubmenu li:hover{
-  text-indent: 20px;
-}
+
 #navIcon{
   float:right;
   padding-right: 15px;
@@ -126,6 +113,17 @@ a[data-toggle="collapse"] {
   margin-top:16px;
   margin-right: 0px;
 }
+
+
+/*.btn{
+  background: rgba(255,255,204,.7);
+  border: 0px;
+}
+.btn:hover{
+  background:rgb(0,0,0,.2);
+  border-color: none;
+  color:white;
+}*
 
 ::-webkit-scrollbar {
     width: 5px;

@@ -3,8 +3,8 @@
 <html lang="en" dir="ltr">
 <?php
 
-  include_once('classes/UserValidation.class.php');
-  /*if (isset($_POST['sign-in'])) {
+  /*include_once('classes/UserValidation.class.php');
+  if (isset($_POST['sign-in'])) {
     $validation = new Validation($_POST);
     $message = $validation->validate();
   }*/
@@ -32,8 +32,8 @@
   <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">
-        <img class="rounded-circle" src="bcshs.jpg" width="40" height="40" alt="">
-        BAYBAY CITY SENIOR HIGH SCHOOL
+        <img class="rounded-circle" src="/srms.bcshs.dev/public/images/bcshs.jpg" width="40" height="40" alt="">
+        Baybay City Senior High School
       </a>
     </nav>
     <div class="container-fluid">
@@ -50,7 +50,6 @@
                 <h2>STUDENT RECORD MANAGEMENT SYSTEM</h2>
               </div>
             </div>
-
           </div>
 
         </div>
@@ -59,11 +58,11 @@
           <div class="login-container">
             <div class="cust-card">
 
-              <!--<div class="row">
+              <div class="row">
                 <div class="col-md-12">
                   <p id="message"><?php //echo $message['username'] ?? '' ?></p>
                 </div>
-              </div>-->
+              </div>
               <div class="cust-card-header">
                 <h4>LOGIN</h4>
               </div>

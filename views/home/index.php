@@ -7,7 +7,7 @@
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>Department</title>
+     <title>Home</title>
      <!-- Bootstrap CSS -->
      <link href="/srms.bcshs.dev/public/css/Bootstrap 4/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,6 +44,14 @@
               <div class="col-md-4"></div>
             </div>
             <hr>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="background-img">
+
+                </div>
+              </div>
+            </div>
 
           </div><!--- container-fluid END -->
 

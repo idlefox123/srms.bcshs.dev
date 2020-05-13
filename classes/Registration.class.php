@@ -7,6 +7,7 @@ include_once('Message.class.php');
  */
 class Registration extends DatabaseController
 {
+  protected $users = "users";
   protected $student = "student";
   protected $parents = "parents";
   protected $educationalbackground = "educationalbackground";
@@ -63,19 +64,28 @@ class Registration extends DatabaseController
     return $semester;
   }
 
-  public function getStrand(){
-    $this->loadResult("SELECT strand_id, strand FROM strands");
-    $strand = $this->getResult();
+  public function getStrand() {
+    $DB = new DatabaseController();
+    $DB->loadResult("SELECT strand_id, strand FROM strands");
+    $strand = $DB->getResult();
     return $strand;
   }
 
-  public function getRecord($id){
-    $this->setQuery("SELECT  *, parents.*, educationalbackground.school_name,educationalbackground.school_address FROM `student`
+  public function getRecord($id) {
+    $DB = new DatabaseController();
+    $DB->setQuery("SELECT  *, parents.*, educationalbackground.school_name,educationalbackground.school_address FROM `student`
       LEFT JOIN parents on student.student_id = parents.student_id
       LEFT JOIN educationalbackground on student.student_id = educationalbackground.student_id
       WHERE student.student_id = $id");
-    $studentRecord = $this->getRes();
+    $studentRecord = $DB->getRes();
     return $studentRecord;
+  }
+
+  public function getStudent($id) {
+    $DB = new DatabaseController();
+    $DB->setQuery("SELECT concat(last_name, ', ', first_name, ' ', middle_name, ' ', extension_name) as name FROM student");
+    $student = $DB->getRes();
+    return $student;
   }
 
   public function validation($attributes, $data) {
@@ -92,30 +102,57 @@ class Registration extends DatabaseController
     }
   }
 
-  public function insertPG($id, $p_data){
-    $db = new databaseController();
+  private function insertPG($id, $p_data) {
+    $DB = new DatabaseController();
     foreach ($p_data as $data) {
       $pg_data = array($data['pgName'], $data['relationship'], $data['pgAddress'], $data['pgContact'], $id);
-      $db->setQuery("INSERT INTO $this->parents (`p_name`, `relationship`, `p_address`, `p_contact`, `student_id`)
+      $DB->setQuery("INSERT INTO $this->parents (`p_name`, `relationship`, `p_address`, `p_contact`, `student_id`)
                     VALUES (?,?,?,?,?)");
-      $db->bindParameter($pg_data);
+      $DB->bindParameter($pg_data);
     }
   }
 
-  public function insertEduBack($id) {
+  private function insertEduBack($id) {
     $attributes = $this->setAttributes($this->educationalbackground);
     $attributes = array('student_id'=>$id) + $attributes;
     $parameter = $this->genParameter($attributes);
-    $db = new databaseController();
+    $DB = new DatabaseController();
     $query = "INSERT INTO $this->educationalbackground ";
     $query .= '('.join(', ', array_keys($attributes)).')';
     $query .= " VALUES (" .$parameter. ")";
-    $db->setQuery($query);
-    $db->bindParameter(array_values($attributes));
+    $DB->setQuery($query);
+    $DB->bindParameter(array_values($attributes));
   }
 
-  public function insert() {
-    $attributes = $this->setAttributes($this->student);
+  private function createAccount($id) {
+    try {
+      $student = new User();
+      //$student->user     = $this->getStudent();
+      echo $this->getStudent($id);;
+      /*$student->username = '';
+      $student->password = '123';
+      $student->role     = 'Student';
+
+      $student->create();
+
+      $user_id = $student->getLastInsertedID();
+
+      $student = new Registration();
+      $student->user_id = $user_id;
+      $this->updateStudent($id);*/
+
+    } catch(PDOException $ex){
+      echo 'error: ', $ex;
+      return false;
+     }
+    return true;
+
+  }
+
+  public function create() {
+    $this->createAccount($lastInsertedID);
+
+    /*$attributes = $this->setAttributes($this->student);
     $attributes = $this->validation($this->getTableFields($this->student), $attributes);
 
     if ($this->status == true) {
@@ -139,6 +176,8 @@ class Registration extends DatabaseController
           $this->insertEduBack($lastInsertedID);
         }
 
+        $this->createAccount($lastInsertedID);
+
       }catch(PDOException $ex){
         echo 'error: ', $ex;
         return false;
@@ -146,36 +185,38 @@ class Registration extends DatabaseController
       return true;
     }else {
       return $this->message;
-    }
+    }*/
 
   }
 
-  public function updateStudent($id){
-    $setOfAttributePairs = $this->setAttributePairs($this->student);
+  private function updateStudent($id) {
+    $attributes = $this->setAttributes($this->student);
+    print_r($attributes);
+    /*$setOfAttributePairs = $this->setAttributePairs($this->student);
     $parameter = $this->genParameter($setOfAttributePairs);
     $attributes = $this->setAttributes($this->student);
     array_push($attributes,$id);
 
-    $db = new DatabaseController();
+    $DB = new DatabaseController();
     $query = "Update $this->student ";
     $query .= "SET ".join(', ', $setOfAttributePairs);
     $query .= " WHERE student_id=?";
-    $db->setQuery($query);
-    $db->bindParameter(array_values($attributes));
+    $DB->setQuery($query);
+    $DB->bindParameter(array_values($attributes));*/
   }
 
-  public function updateEducBack($id){
+  private function updateEducBack($id) {
     $setOfAttributePairs = $this->setAttributePairs($this->educationalbackground);
     $parameter = $this->genParameter($setOfAttributePairs);
     $attributes = $this->setAttributes($this->educationalbackground);
     array_push($attributes,$id);
 
-    $db = new DatabaseController();
+    $DB = new DatabaseController();
     $query = "Update $this->educationalbackground ";
     $query .= "SET ".join(', ', $setOfAttributePairs);
     $query .= " WHERE student_id=?";
-    $db->setQuery($query);
-    $db->bindParameter(array_values($attributes));
+    $DB->setQuery($query);
+    $DB->bindParameter(array_values($attributes));
   }
 
   public function update($id) {

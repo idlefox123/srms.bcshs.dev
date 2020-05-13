@@ -23,7 +23,7 @@
       <a href="/srms.bcshs.dev/My-Class-Schedules"><i id="sidebarIcon" class="fa fa-calendar-alt"></i> Class Schedule</a>
     </li>
     <li>
-      <a href="/srms.bcshs.dev/My-Account"><i id="sidebarIcon" style =""class="fa fa-cog"> </i>Account</a>
+      <a href="/srms.bcshs.dev/My-Account"><i id="sidebarIcon" style =""class="fa fa-user-cog"> </i>Account</a>
     </li>
   </ul>
   <div class="navFooter">

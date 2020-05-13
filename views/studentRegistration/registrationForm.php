@@ -4,7 +4,7 @@
     <form id="studentRecordForm" class="studentRecordForm" action="" method="post">
 
       <div class="mt-3">
-        <h4 class="text-center"><i class="fa fa-info-circle"> Student Profile</i></h4>
+        <h5 class="text-center"><i class="fa fa-info-circle"> Student Profile</i></h5>
       </div>
       <hr>
 
@@ -131,7 +131,7 @@
         <div class="">
           <div class="float-right ">
             <button id="save" class="btn costBtn btn-outline-success" data-toggle="modal" data-target="" type="submit" name="save" value="save"><i class="fa fa-save"> Save Changes</i></button>
-            <button id="go-to-enrollment-btn" type="button" class="btn costBtn"><span class="font-weight-bold">Go to Enrollment </span><i class="fa fa-arrow-circle-right"></i></button>
+            <button id="go-to-enrollment-btn" type="button" class="btn costBtn btn-outline-info"><span class="font-weight-bold">Go to Enrollment </span><i class="fa fa-arrow-circle-right"></i></button>
             <input id="action" hidden type="text" name="action" value=""></input>
           </div>
         </div><!--footer end--->

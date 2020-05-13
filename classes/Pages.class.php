@@ -131,6 +131,10 @@ class Pages
         include 'views/studentScheduling/index.php';
         break;
 
+      case 'My-Account':
+        include 'views/encoder - Account/index.php';
+        break;
+
       default:
         include 'views/studentRegistration/index.php';
         break;

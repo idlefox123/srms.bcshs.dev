@@ -1,6 +1,6 @@
 <?php
    include_once('accountView.php');
-   $view = new AccountView();
+   $view = new View();
    $user = $view->user();
  ?>
 <!doctype html>
@@ -14,9 +14,9 @@
    <link href="/srms.bcshs.dev/public/css/Bootstrap 4/css/bootstrap.min.css" rel="stylesheet">
 
    <!-- Costum Css -->
-   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/facultyCSS/sidebarCSS.css">
-   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/facultyCSS/navBarCSS.css">
-   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/facultyCSS/contentCSS.css">
+   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/encoderCSS/sidebarCSS.css">
+   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/encoderCSS/navBarCSS.css">
+   <link rel="stylesheet" href="/srms.bcshs.dev/public/css/encoderCSS/contentCSS.css">
    <link rel="stylesheet" href="/srms.bcshs.dev/public/font/css/all.min.css">
 
    <!-- Bootstrap DataTables -->
@@ -25,8 +25,8 @@
  </head>
 
  <body>
-   <?php require('templates/faculty/navbar.php'); ?>
-   <?php require('templates/faculty/sidebar.php'); ?>
+   <?php require('templates/encoder/navbar.php'); ?>
+   <?php require('templates/encoder/sidebar.php'); ?>
    <div class="wrapper">
 
      <div id= "main-container">
@@ -35,7 +35,7 @@
 
        <div class="row">
          <div class="col-sm-3">
-           <h4><i class="fa fa-user-cog"> Account</i></h4>
+           <h4><i class="fa fa-user-circle"> Profile</i></h4>
          </div>
          <div class="col-sm-9">
            <div class="float-right">
@@ -72,9 +72,9 @@
                  <div class="col-md-8">
 
                    <ul class="list-group list-group-flush">
-                     <li class="list-group-item"> <span id="user"><?php echo $user['user']; ?></span> </li>
-                     <li class="list-group-item"> <span id="username"><?php echo $user['username']; ?></span> </li>
-                     <li class="list-group-item"> <span id="role"><?php echo $user['role']; ?></span> </li>
+                     <li class="list-group-item"> <span id="user"></span> </li>
+                     <li class="list-group-item"> <span id="username"></span> </li>
+                     <li class="list-group-item"> <span id="role"></span> </li>
                    </ul>
                  </div>
                </div>
@@ -109,6 +109,6 @@
 
   <!-- Costum JavaScript -->
   <script src="/srms.bcshs.dev/public/js/customJS/customJS.js" type="text/javascript"></script>
-  <script src="/srms.bcshs.dev/views/facultyAccount/index.js" type="text/javascript"></script>
+  <script src="/srms.bcshs.dev/views/student - Account/index.js" type="text/javascript"></script>
  </body>
 </html>

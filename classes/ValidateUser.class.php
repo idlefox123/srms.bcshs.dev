@@ -4,7 +4,7 @@ include_once('Message.class.php');
 /**
  *
  */
-class ValidateUser
+class Validation
 {
   private $data;
   private $messages = [];

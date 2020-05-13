@@ -28,6 +28,7 @@ $('.account-form').on('submit', function(){
       {
         $('#account-modal').modal('hide');
         getUser();
+        $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
       }
     });
   }else {

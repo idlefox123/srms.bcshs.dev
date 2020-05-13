@@ -1,6 +1,7 @@
 <?php
-include_once('../../classes/facultyAccount.class.php');
 session_start();
+include_once('../../classes/facultyAccount.class.php');
+include_once('../../classes/Message.class.php');
 
 if (isset($_POST['action']))
 {
@@ -32,9 +33,9 @@ function update() {
 
   $user = $user->update($_SESSION['userID']);
   if ($user === true) {
-    echo "Successfully Updated.";
+    echo message('success', 'Account Succesfully Updated');
   }else {
-    echo "Error on Update.";
+    echo message('danger', 'Error on Update');
   }
 }
 

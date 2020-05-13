@@ -48,7 +48,7 @@
        <div class="row mb-2">
          <div class="col-md-12">
            <div class="float-right">
-             <button id="set-ay-btn" class="btn costBtn" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
+             <button id="set-ay-btn" class="btn costBtn btn-outline-primary" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
            </div>
          </div>
        </div>
@@ -58,7 +58,7 @@
           <div class="col-md-4">
             <div class="card">
               <div class="card-header">
-                <h5> <i class="fa fa-users"> Student</i> </h5>
+                <h5> <i class="fa fa-"> Students</i> </h5>
               </div>
               <div class="card-body">
                 <div class="mt-2">
@@ -118,12 +118,11 @@
 
           <div class="col-md-8">
             <div class="card card-def-size">
-              <div class="card-header">
-                <div class="text-center">
-                  <h5> <i class="fa fa-info-circle"> Learner's Information</i> </h5>
-                </div>
-              </div>
               <div class="card-body">
+                <div class="mt-3">
+                  <h5 class="text-center"> <i class="fa fa-info-circle"> Learner's Information</i> </h5>
+                  <hr>
+                </div>
                 <div class="row mt-2" style="font-size:1.1em">
                   <div class="col-sm-8">
                     <p><span class="font-weight-bold">Name: </span><span id="student"></span></p>
@@ -139,15 +138,18 @@
 
                 </div>
 
-                <table  id="gradingTable" class="table table-hover" width="100%">
+                <table  id="gradingTable" class="table-hover table-bordered">
                   <thead>
                     <tr>
-                      <th class="text-center" width="15%">ION</th>
-                      <th class="text-center" width="45%">Subject</th>
-                      <th class="text-center" width="5%">1st</th>
-                      <th class="text-center" width="5%">2nd</th>
-                      <th class="text-center" width="10%">Final</th>
-                      <th class="text-center" width="10%">Remark</th>
+                      <th rowspan="2" width="15%">Type</th>
+                      <th rowspan="2" width="45%">Subject</th>
+                      <th colspan="2" width="20%">Quarter</th>
+                      <th rowspan="2" width="10%">Final</th>
+                      <th rowspan="2" width="10%">Remark</th>
+                    </tr>
+                    <tr style="">
+                      <th width="10%"> <span id="quarter1">1st</span> </th>
+                      <th width="10%" style="border-right:1px solid lightgrey;"> <span id="quarter2">2nd</span> </th>
                     </tr>
                   </thead>
                 </table>

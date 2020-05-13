@@ -72,8 +72,17 @@ $('#strandFilter, #levelFilter').on('change', function(){
 
 $('#AY, #semester').on('change', function(){
   studentTable.draw();
-  //alert($('#schlYear').val()  );
-  //studentTable.fnDraw();
+  year = $('#AY').val();
+  toYear = parseInt(year) + 1;
+  semester = $('#semester').val();
+  $('#currYear').text(year);
+  $('#toYear').text(toYear);
+  if (semester == 1) {
+    $('#currSemester').text('First Semester');
+  }else {
+    $('#currSemester').text('Second Semester');
+  }
+  setQuarter(semester);
 });
 
 
@@ -161,6 +170,19 @@ function getStudentGrades() {
     }
   })
 }
+
+semester = $('#semester').val();
+function setQuarter(semester) {
+  if (semester == 1) {
+    $('#quarter1').text('1st');
+    $('#quarter2').text('2nd');
+  }else {
+    $('#quarter1').text('3rd');
+    $('#quarter2').text('4th');
+  }
+}
+
+setQuarter(semester);
 
 function average(data) {
   var ave = 0, ctr = 0;

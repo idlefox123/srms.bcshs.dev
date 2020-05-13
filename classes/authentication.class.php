@@ -103,7 +103,6 @@ class Authentication
           }
         }
       }
-
       }else {
         return $this->message;
       }

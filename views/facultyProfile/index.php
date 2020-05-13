@@ -1,7 +1,7 @@
 <?php
   include_once('profileView.php');
   $view = new ProfileView();
-  
+
 ?>
 <!doctype html>
 
@@ -42,6 +42,14 @@
            </div>
          </div>
        </div>
+       <div class="row">
+         <div class="col-md-4"></div>
+         <div class="col-md-4">
+           <span id="message">
+           </span>
+         </div>
+         <div class="col-md-4"></div>
+       </div>
        <hr>
 
        <!--<div class="profile-container">
@@ -57,7 +65,7 @@
 
        <div class="row mt-2">
          <div class="col-md-2"></div>
-         <div class="col-md-8">
+         <div class="col-md-8 flex">
            <div class="card">
              <div class="card-header">
                <h5><i class="fa fa-info-circle"> My Profile</i></h5>

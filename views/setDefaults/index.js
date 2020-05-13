@@ -60,21 +60,13 @@ $('.set-default-form').on('submit', function() {
       data:$('.set-default-form').serialize() + '&action=' + action,
       success:function(data)
       {
-        getDefaults();
-        $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
+        location.href = "/srms.bcshs.dev/Set-Defaults";
       }
     });
   }else {
     alert('Select a Section.')
   }
 });
-
-function message() {
-  message = '<div class="alert alert-danger position-absolute text-center" style="width:100%;">'
-    + "Select a Section to Delete." +
-    '</div>'
-    return message;
-}
 
 function validated() {
   if (action == 'update') {

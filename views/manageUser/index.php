@@ -34,7 +34,7 @@ $view = new View();
 
        <div class="row">
          <div class="col-sm-3">
-           <h4><i class="fa fa-user-cog"> Manage Users</i></h4>
+           <h4><i class="fa fa-users-cog"> Manage Users</i></h4>
          </div>
          <div class="col-sm-9">
            <div class="float-right">
@@ -72,7 +72,7 @@ $view = new View();
              <table id="userTable" class="table table-hover table-bordered" width="100%">
                <thead>
                  <tr class="text-center">
-                   <th width="70%"><i class="fa fa-users"> User</i></th>
+                   <th width="70%"><i class="fa fa"> Accounts</i></th>
                  </tr>
                </thead>
              </table>
@@ -81,7 +81,7 @@ $view = new View();
          <div class="col-md-7 font-weight-bold">
 
            <div class="card-header mt-2">
-             <h5 class="font-weight-bold"><i class="fa fa-info-circle"> User</i></h5>
+             <h5 class="font-weight-bold"><i class="fa fa-info-circle"> Account</i></h5>
            </div>
            <hr>
 

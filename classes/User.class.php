@@ -8,6 +8,7 @@ include_once('Message.class.php');
 class User
 {
   protected $users = "users";
+  private $lastInsertedID;
   private $validated_attr = array();
   private $message;
 
@@ -96,6 +97,7 @@ class User
         $query .= " VALUES (" .$parameter. ")";
         $DB->setQuery($query);
         $DB->bindParameter(array_values($attributes));
+        $lastInsertedID = $DB->getLastInsertedID();
 
       }catch(PDOException $ex){
         //echo 'ERROR: ' .$ex->getMessage();
@@ -143,6 +145,10 @@ class User
       return false;
     }
     return true;
+  }
+
+  public function getLastInsertedID() {
+    return $this->$lastInsertedID;
   }
 
 }

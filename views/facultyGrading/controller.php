@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once('../../classes/FacultyGrading.class.php');
+include_once('../../classes/Message.class.php');
 
 if (isset($_POST['action']))
 {
@@ -39,9 +40,9 @@ if (isset($_POST['action']))
     $grade = $grade->update($id);
 
     if ($grade===true) {
-      echo 'Grades Updated.';
+      echo message('success', 'Grade Succesfully Updated');
     }else {
-      echo "Error on Update";
+      echo message('danger', 'Error on Update');
     }
   }
 

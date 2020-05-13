@@ -92,6 +92,7 @@ $('.gradingForm').on('submit', function(event) {
       $('#gradingModal').modal('hide');
       getStudentsGrades();
       studentsTable.draw(false);
+      $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
     }
   })
 })

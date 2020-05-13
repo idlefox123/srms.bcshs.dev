@@ -69,7 +69,7 @@
                <?php
                $btn = '<div class="flex-center">
                          <span>
-                           <button id="set-ay-btn" class="btn costBtn" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
+                           <button id="set-ay-btn" class="btn costBtn btn-outline-primary" data-toggle="modal" data-target="#set-AY-modal" name="set-ay-btn" type="button"><i class="fa fa-calendar-alt"> Set Academic Year</i></button>
                          </span>
                        </div>';
                $role = $_SESSION['role'];
@@ -128,60 +128,70 @@
           </div><!---1st col end-->
 
           <div class="col-md-8">
-            <div class="card">
-              <div class="card-body">
-                <div class="print-content">
-                  <div class="mt-3 text-center">
-                    <p class="hdr">Republic of the Philippines</p>
-                    <p class="hdr">Department of Education</p>
-                    <p class="hdr">Region VIII (Eastern Visayas)</p>
-                    <p class="schl-div">Baybay City Division</p>
-                    <p class="schl-name">Baybay City Senior High School</p>
-                    <i class="schl-add">Baybay City, Leyte</i>
-                    <br>
-                    <br>
-                    <br>
-                    <p class="report-title">Certificate of Registration</p>
-                    <p class="sy">School Year <?php echo $view->AY() ?> - <?php echo $view->AY()+1 ?>  <?php echo $view->semester() ?></p>
-                    <br>
-                  </div>
-
-                  <div class="student-info">
-
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p> <span class="field">LRN: </span> <span id="lrn"></span></p>
-                      </div>
+            <div class="print-content">
+              <div class="card">
+                <div class="card-body">
+                  <div class="print-content">
+                    <div class="mt-3 text-center">
+                      <p class="hdr">Republic of the Philippines</p>
+                      <p class="hdr">
+                        <span>
+                          <img class="doe-logo" src="/srms.bcshs.dev/public/images/DOE.png" alt="">
+                        </span>
+                        Department of Education
+                        <span>
+                          <img class="bcshs-logo" src="/srms.bcshs.dev/public/images/bcshs.jpg" alt="">
+                        </span>
+                      </p>
+                      <p class="hdr">Region VIII (Eastern Visayas)</p>
+                      <p class="schl-div">Baybay City Division</p>
+                      <p class="schl-name">Baybay City Senior High School</p>
+                      <i class="schl-add">Baybay City, Leyte</i>
+                      <br>
+                      <br>
+                      <br>
+                      <p class="report-title">Certificate of Registration</p>
+                      <p class="sy">School Year <span id="currYear"><?php echo $view->AY() ?></span> - <span id="toYear"><?php echo $view->AY()+1 ?></span> <span id="currSemester"><?php echo $view->semester() ?></span> </p>
+                      <br>
                     </div>
 
-                    <div class="row">
-                      <div class="col-md-8">
-                        <p> <span class="field">Name: </span> <span id="name"><u></u></span></p>
-                        <p> <span class="field">Track/Strand:</span> <span id="trackStrand"></span></p>
+                    <div class="student-info">
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p> <span class="field">LRN: </span> <span id="lrn"></span></p>
+                        </div>
                       </div>
-                      <div class="col-md-4">
-                        <p> <span class="field">Grade: </span> <span class="" id="level"></span></p>
-                        <p> <span class="field">Section:</span> <span id="section"></span></p>
+
+                      <div class="row">
+                        <div class="col-md-8">
+                          <p> <span class="field">Name: </span> <span id="name"><u></u></span></p>
+                          <p> <span class="field">Track/Strand:</span> <span id="trackStrand"></span></p>
+                        </div>
+                        <div class="col-md-4">
+                          <p> <span class="field">Grade: </span> <span class="" id="level"></span></p>
+                          <p> <span class="field">Section:</span> <span id="section"></span></p>
+                        </div>
                       </div>
+
+                    </div>
+
+                    <div class="">
+                      <table id="subjectsTable" class="table-bordered" >
+                        <thead>
+                          <tr>
+                            <th class="text-center" width="10%">Type</th>
+                            <th class="text-center" width="50%">Subject</th>
+                            <th class="text-center" width="5%">No.of Hrs.</th>
+                            <th class="text-center" width="5%">Day</th>
+                            <th class="text-center" width="15%">Time</th>
+                            <th class="text-center" width="15%">Room</th>
+                          </tr>
+                        </thead>
+                      </table>
                     </div>
 
                   </div>
-
-                  <div class="">
-                    <table id="subjectsTable" class="table-bordered" >
-                      <thead>
-                        <tr>
-                          <th class="text-center" width="10%">Type</th>
-                          <th class="text-center" width="50%">Subject</th>
-                          <th class="text-center" width="5%">No.of Hrs.</th>
-                          <th class="text-center" width="5%">Day</th>
-                          <th class="text-center" width="15%">Time</th>
-                          <th class="text-center" width="15%">Room</th>
-                        </tr>
-                      </thead>
-                    </table>
-                  </div>
-
                 </div>
               </div>
             </div>

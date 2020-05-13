@@ -2,7 +2,7 @@ var action;
 $('#edit-account-btn').on('click', function(){
   action = 'edit';
   $.ajax({
-    url: "/srms.bcshs.dev/views/facultyAccount/controller.php",
+    url: "/srms.bcshs.dev/views/encoder - Account/controller.php",
     method:"POST",
     dataType: "json",
     data:{
@@ -19,23 +19,27 @@ $('#edit-account-btn').on('click', function(){
 
 $('.account-form').on('submit', function(){
   event.preventDefault();
-  $.ajax({
-    url: "/srms.bcshs.dev/views/facultyAccount/controller.php",
-    method:"POST",
-    data:$('.account-form').serialize() + '&action=' + action,
-    success:function(data)
-    {
-      $('#account-modal').modal('hide');
-      getUser();
-      $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
-    }
-  });
+  if (true) {
+    $.ajax({
+      url: "/srms.bcshs.dev/views/encoder - Account/controller.php",
+      method:"POST",
+      data:$('.account-form').serialize() + '&action=' + action,
+      success:function(data)
+      {
+        $('#account-modal').modal('hide');
+        getUser();
+        $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
+      }
+    });
+  }else {
+    alert('Select a Section.')
+  }
 });
 
 function getUser(){
   action = 'edit';
   $.ajax({
-    url: "/srms.bcshs.dev/views/facultyAccount/controller.php",
+    url: "/srms.bcshs.dev/views/encoder - Account/controller.php",
     method:"POST",
     dataType: "json",
     data:{
@@ -45,7 +49,9 @@ function getUser(){
     {
       $('#user').text(data.user);
       $('#username').text(data.username);
+      $('#role').text(data.role);
       action = 'update';
     }
   });
 }
+getUser();

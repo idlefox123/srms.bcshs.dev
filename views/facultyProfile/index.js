@@ -52,18 +52,15 @@ $('#edit-faculty-btn').on('click', function(){
 $('.facultyForm').on('submit', function(){
   event.preventDefault();
   action = 'update';
-  if (true) {
-    $.ajax({
-      url: "/srms.bcshs.dev/views/facultyProfile/controller.php",
-      method:"POST",
-      data:$('.facultyForm').serialize() + '&action=' + action,
-      success:function(data)
-      {
-        $('#facultyModal').modal('hide');
-        getUser();
-      }
-    });
-  }else {
-    alert('Select a Section.')
-  }
+  $.ajax({
+    url: "/srms.bcshs.dev/views/facultyProfile/controller.php",
+    method:"POST",
+    data:$('.facultyForm').serialize() + '&action=' + action,
+    success:function(data)
+    {
+      $('#facultyModal').modal('hide');
+      getUser();
+      $('#message').fadeIn().delay(2000).fadeOut('slow').html(data);
+    }
+  });
 });
