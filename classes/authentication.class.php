@@ -76,7 +76,7 @@ class Authentication
     $setOfAttributePairs = $this->setAttributePairs($this->users);
     $attributes = $this->validation($this->getTableFields($this->users), $attributes);
 
-    if ($this->status == true) {
+    try {
       $DB = new DatabaseController();
       $conn = $DB->openConnection();
       $query = "SELECT * FROM $this->users WHERE username = ?";
@@ -102,10 +102,13 @@ class Authentication
             $this->setSession($session);
           }
         }
+        return true;
       }
-      }else {
-        return $this->message;
-      }
+    } catch (PDOException $ex) {
+      echo 'ERROR: ' .$ex->getMessage();
+      return false;
+    }
+
   }
 
   public function setSession($data) {

@@ -55,7 +55,7 @@ $view = new View();
        <div class="row">
          <div class="col-md-12">
            <div class="float-right">
-             <button id="new-user-btn" class="btn costBtn btn-outline-primary" name="new-user-btn" type="button"><i class="fa fa-plus-circle"> New User</i></button>
+             <button id="new-user-btn" class="btn costBtn btn-outline-primary" name="new-user-btn" type="button"><i class="fa fa-plus-circle"> New Account</i></button>
            </div>
          </div>
        </div>

@@ -10,7 +10,7 @@ if (isset($_POST['sign-in'])) {
   $auth->password = $_POST['password'];
 
   $auth = $auth->authenticateUser();
-  if ($auth) {
+  if ($auth === true) {
     echo "success";
   }else {
     header('Location: /srms.bcshs.dev/');
